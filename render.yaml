@@ -2,6 +2,7 @@ services:
   - type: web
     name: face-recognition-backend
     env: python
-    buildCommand: pip install -r requirements.txt
+     apt-get update && apt-get install -y cmake build-essential
+      pip install -r requirements.txt
     startCommand: python app.py  
     pythonVersion: 3.10
