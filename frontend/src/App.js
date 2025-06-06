@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     // Check if backend is running
-    fetch('http://127.0.0.1:5000/')
+    fetch(`${process.env.REACT_APP_API_URL}/face_recognition`)
       .then(response => response.json())
       .then(data => setBackendStatus(data.message))
       .catch(error => setBackendStatus('Backend not connected'));
